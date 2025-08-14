@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PW-3D SOLUTIONS – 3D‑Druck · Prototyping · Beratung</title>
+  <meta name="description" content="PW-3D SOLUTIONS: Additive Fertigung, Prototypen, technische Beratung und CAD-Entwicklung. Schnell, präzise, fair.">
+  <meta name="robots" content="index,follow">
+
+  
+  <meta property="og:title" content="PW-3D SOLUTIONS">
+  <meta property="og:description" content="3D‑Druck, Prototypen & Beratung aus Nersingen.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:url" content="https://pw-3d.de/">
+
+  <link rel="icon" href="assets/favicon.png">
+
+  <style>
+    :root{
+      --bg:#0a0a0a;        /* deep black */
+      --ink:#f2f2f2;       /* primary text */
+      --muted:#a9a9a9;     /* secondary text */
+      --line:#262626;      /* hairline borders */
+      --panel:#111111;     /* cards */
+      --accent:#ffffff;    /* subtle accent (white) */
+      --maxw:1120px;
+      --radius:14px;
+      --gap:clamp(16px,2vw,28px);
+      --fs-hero:clamp(30px,5vw,56px);
+      --fs-h2:clamp(22px,3vw,34px);
+      --fs-body:clamp(16px,1.2vw,18px);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:var(--bg);color:var(--ink);
+      font:400 var(--fs-body)/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, Helvetica;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .container{max-width:var(--maxw);margin-inline:auto;padding:0 20px}
+    a{color:var(--ink);text-decoration: underline;text-underline-offset:2px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+      padding:.9rem 1.15rem;border-radius:12px;font-weight:800;
+      background:var(--ink);color:#0a0a0a;border:2px solid var(--ink);
+      text-decoration:none;cursor:pointer;transition:transform .12s ease, opacity .2s ease;
+    }
+    .btn.secondary{background:transparent;color:var(--ink);border-color:var(--ink)}
+    .btn:hover{transform:translateY(-1px)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+    .grid{display:grid;gap:var(--gap)}
+    .grid-2{grid-template-columns:1.05fr .95fr}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:960px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(10,10,10,.9);backdrop-filter:saturate(1.05) blur(8px);
+      border-bottom:1px solid var(--line)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:.75rem 0}
+    .brand{display:flex;align-items:center;gap:.8rem;font-weight:900;letter-spacing:.2px}
+    .brand img{width:40px;height:40px}
+    nav ul{display:flex;gap:.8rem;list-style:none;margin:0;padding:0}
+    nav a{display:block;padding:.55rem .7rem;border-radius:10px;text-decoration:none;color:var(--ink)}
+    nav a:hover{background:#141414}
+    .hamburger{display:none;background:none;border:none;font-size:1.6rem;color:var(--ink)}
+    @media (max-width:820px){
+      nav ul{display:none;position:absolute;left:0;right:0;top:60px;padding:12px 20px;background:#0f0f0f;border-bottom:1px solid var(--line)}
+      nav ul.open{display:grid;gap:.5rem}
+      .hamburger{display:block}
+    }
+
+    .hero{padding:clamp(48px,8vw,120px) 0;border-bottom:1px solid var(--line)}
+    .hero-wrap{display:grid;gap:var(--gap);grid-template-columns:1.05fr .95fr;align-items:center}
+    .hero h1{font-size:var(--fs-hero);line-height:1.06;margin:0 0 12px;letter-spacing:-.5px}
+    .hero p{margin:0 0 22px;color:var(--muted)}
+    .hero-media{position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0f0f0f;display:grid;place-items:center}
+    .hero-media img{max-width:70%;height:auto;opacity:.95;filter:grayscale(100%) contrast(110%)}
+
+    section{padding:clamp(42px,7vw,90px) 0}
+    h2{font-size:var(--fs-h2);line-height:1.2;margin:0 0 14px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:18px}
+    .kicker{letter-spacing:.22em;text-transform:uppercase;font-weight:900;font-size:.78rem;color:#d9d9d9}
+
+    .service{padding:20px;display:grid;gap:10px}
+    .service h3{margin:0}
+    .muted{color:var(--muted)}
+    .step{display:flex;gap:14px;align-items:flex-start}
+    .step .num{flex:0 0 38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#1a1a1a;color:#fff;font-weight:900;border:1px solid var(--line)}
+
+    footer{padding:28px 0;color:#bdbdbd;border-top:1px solid var(--line)}
+    .legal{display:flex;gap:1rem;flex-wrap:wrap}
+
+    /* Info-Hinweis (kein Consent) */
+    .cookie-info{
+      position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+      background:#111;border:1px solid #2a2a2a;color:#eaeaea;padding:12px 16px;border-radius:10px;
+      font-size:.85rem;display:flex;align-items:center;gap:.8rem;z-index:999;max-width:92%;
+      box-shadow:0 6px 18px rgba(0,0,0,.4)
+    }
+    .cookie-info button{
+      background:#eaeaea;color:#0a0a0a;border:none;border-radius:6px;padding:4px 10px;font-weight:700;cursor:pointer
+    }
+    .cookie-info.hide{display:none}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"PW-3D SOLUTIONS",
+    "url":"https://pw-3d.de/",
+    "email":"info@pw-3d.de",
+    "vatID":"DE452616006",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Mörikeweg 3",
+      "postalCode":"89278",
+      "addressLocality":"Nersingen",
+      "addressCountry":"DE"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/pw3d-logo.png" alt="PW-3D SOLUTIONS Logo" />
+      <span>PW-3D SOLUTIONS</span>
+    </div>
+    <nav aria-label="Hauptnavigation">
+      <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+      <ul id="navlist">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+        <li><a href="#datenschutz">Datenschutz</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:.5rem">
+      <a class="btn secondary" href="mailto:info@pw-3d.de">E‑Mail</a>
+      <a class="btn" href="#kontakt">Anfragen</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="kicker">PW‑3D SOLUTIONS</div>
+        <h1>Präziser 3D‑Druck, Prototypen & Beratung</h1>
+        <p>Individuelle Dienstleistungen in den Bereichen additiver Fertigung, Prototypenerstellung und technischer Beratung – für Unternehmen und Privatpersonen.</p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <a class="btn" href="mailto:info@pw-3d.de">Datei senden & Angebot erhalten</a>
+          <a class="btn secondary" href="#leistungen">Leistungen ansehen</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/pw3d-logo.png" alt="PW‑3D SOLUTIONS Emblem">
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="leistungen">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Leistungen</div>
+          <h2>Was PW‑3D SOLUTIONS anbietet</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card service">
+          <h3>3D‑Druck (Additive Fertigung)</h3>
+          <p class="muted">FDM und auf Anfrage weitere Verfahren. Funktions‑ & Designteile, Kleinserien, Musterbau.</p>
+          <ul>
+            <li>Materialempfehlung nach Einsatz</li>
+            <li>Maßhaltigkeit & Qualität</li>
+            <li>Transparente, faire Preise</li>
+          </ul>
+        </article>
+        <article class="card service">
+          <h3>Beratung 3D‑Druck</h3>
+          <p class="muted">Technische Beratungsleistungen zum Einsatz von 3D‑Druck‑Technologien.</p>
+          <ul>
+            <li>Material‑ & Technologieauswahl</li>
+            <li>Bauteiloptimierung für AM</li>
+            <li>Prozess & Qualität</li>
+          </ul>
+        </article>
+        <article class="card service">
+          <h3>Prototypen‑Design & CAD</h3>
+          <p class="muted">Entwicklung und Konstruktion von Prototypen für verschiedene Anwendungsbereiche.</p>
+          <ul>
+            <li>CAD nach Vorgaben</li>
+            <li>Iteratives Prototyping</li>
+            <li>Dokumentation auf Wunsch</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="ablauf">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Ablauf</div>
+          <h2>In 4 Schritten zum fertigen Teil</h2>
+        </div>
+      </div>
+      <div class="grid grid-2">
+        <div class="card" style="padding:18px">
+          <div class="step"><div class="num">1</div><div><strong>Datei/Anfrage</strong><br><span class="muted">STL/STEP & Anforderungen (Stückzahl, Material, Farbe).</span></div></div>
+          <div class="step"><div class="num">2</div><div><strong>Angebot</strong><br><span class="muted">Schnelles, transparentes Angebot per E‑Mail.</span></div></div>
+          <div class="step"><div class="num">3</div><div><strong>Produktion</strong><br><span class="muted">Druck, Prüfung, optional Fotos/Protokoll.</span></div></div>
+          <div class="step"><div class="num">4</div><div><strong>Lieferung</strong><br><span class="muted">Abholung oder Versand mit Rechnung.</span></div></div>
+        </div>
+        <div class="card" style="padding:20px">
+          <h3 style="margin-top:0">Materialien (Auszug)</h3>
+          <p class="muted">PLA/PLA‑Tough · PETG · ABS/ASA · PA‑CF · TPU · weitere auf Anfrage.</p>
+          <p><a class="btn" href="mailto:info@pw-3d.de">Anfrage per E‑Mail</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="kontakt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Kontakt</div>
+          <h2>Unverbindlich anfragen</h2>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px">
+        <p><strong>PW‑3D SOLUTIONS</strong><br>Philipp Wenk<br>Mörikeweg 3<br>89278 Nersingen</p>
+        <p>E‑Mail: <a href="mailto:info@pw-3d.de">info@pw-3d.de</a></p>
+        <p class="muted">Kein Telefonkontakt veröffentlicht.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap">
+    <div>© <span id="year"></span> PW‑3D SOLUTIONS</div>
+    <div class="legal">
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<section id="impressum" class="container" style="padding:40px 20px">
+  <h2 style="font-size:1.2rem;margin:0 0 8px">Impressum</h2>
+  <p><strong>Anbieter</strong><br>PW‑3D SOLUTIONS – Philipp Wenk<br>Mörikeweg 3, 89278 Nersingen, Deutschland</p>
+  <p><strong>Kontakt</strong><br>E‑Mail: <a href="mailto:info@pw-3d.de">info@pw-3d.de</a></p>
+  <p><strong>USt‑IdNr.</strong> DE452616006</p>
+  <p><strong>Inhaltlich verantwortlich i.S.d. § 18 Abs. 2 MStV</strong><br>Philipp Wenk, Anschrift wie oben.</p>
+  <p class="muted" style="max-width:70ch">Rechtsform: Einzelunternehmen. Angaben gem. § 5 TMG. Diese Seite ist ein statisches Informationsangebot ohne Nutzerkonten, ohne Bestellfunktion und ohne Tracking.</p>
+</section>
+
+<section id="datenschutz" class="container" style="padding:0 20px 60px">
+  <h2 style="font-size:1.2rem;margin:0 0 8px">Datenschutzerklärung</h2>
+  <p><strong>1. Verantwortlicher</strong><br>PW‑3D SOLUTIONS – Philipp Wenk, Mörikeweg 3, 89278 Nersingen, E‑Mail: <a href="mailto:info@pw-3d.de">info@pw-3d.de</a></p>
+  <p><strong>2. Hosting</strong><br>Diese Website wird als statische Seite (z.&nbsp;B. GitHub Pages/CDN) bereitgestellt. Beim Aufruf werden technisch notwendige Server‑Logdaten verarbeitet (z.&nbsp;B. IP‑Adresse, Zeitpunkt, angeforderte Datei). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung). Logdaten werden nur zur Fehleranalyse/Sicherheit verwendet und automatisch gelöscht, sofern keine längere Aufbewahrung erforderlich ist.</p>
+  <p><strong>3. Kontakt per E‑Mail</strong><br>Bei Kontaktaufnahme per E‑Mail werden die mitgeteilten Daten zur Bearbeitung der Anfrage verarbeitet (Art. 6 Abs. 1 lit. b/f DSGVO). Die Daten werden gelöscht, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+  <p><strong>4. Cookies/Tracking</strong><br>Diese Website setzt keine Tracking‑ oder Marketing‑Cookies. Es werden lediglich technisch notwendige Cookies eingesetzt, soweit sie für die Bereitstellung der Seite erforderlich sind.</p>
+  <p><strong>5. Rechte der betroffenen Personen</strong><br>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Zudem besteht ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde.</p>
+  <p class="muted" style="max-width:70ch">Hinweis: Diese Muster‑Information ist für eine rein statische Seite ohne Formulare/Tracker ausgelegt und ersetzt keine individuelle Rechtsberatung.</p>
+</section>
+
+<div class="cookie-info" id="cookieInfo">
+  <span>Hinweis: Diese Website verwendet nur technisch notwendige Cookies.</span>
+  <button id="cookieClose" aria-label="Hinweis schließen">OK</button>
+</div>
+
+<script>
+  // Mobile Nav
+  const btn=document.querySelector('.hamburger');
+  const list=document.getElementById('navlist');
+  if(btn){btn.addEventListener('click',()=>{const open=list.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});}
+
+  // Footer Jahr
+  const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+
+  // Hinweis (nur Info, kein Consent)
+  const box=document.getElementById('cookieInfo');
+  const close=document.getElementById('cookieClose');
+  if(localStorage.getItem('cookieInfoDismissed')) box.classList.add('hide');
+  close.addEventListener('click',()=>{box.classList.add('hide');localStorage.setItem('cookieInfoDismissed','1');});
+</script>
+
+</body>
+</html>
