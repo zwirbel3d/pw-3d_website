@@ -30,7 +30,10 @@
   /* header */
   header{padding:14px 0; border-bottom:1px solid var(--line); position:sticky; top:0; background:#0a0a0aE6; backdrop-filter:blur(6px)}
   .brand{display:flex; align-items:center; gap:12px}
-  .brand img{width:36px; height:36px}
+  .brand img{
+    width:36px; height:36px;
+    background:#fff; border-radius:8px; padding:4px; box-shadow:0 0 0 1px #2a2a2a;
+  }
   .brand-name{font-weight:900; letter-spacing:.2px}
 
   /* hero */
@@ -49,7 +52,10 @@
 
   .panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:16px}
   .media{display:grid; place-items:center; border-radius:var(--r); overflow:hidden}
-  .media img{max-width:70%; opacity:.95; filter:grayscale(100%) contrast(110%)}
+  .media img{
+    max-width:70%; height:auto; opacity:1; filter:none;
+    background:#fff; border-radius:12px; padding:12px; box-shadow:0 0 0 1px #2a2a2a;
+  }
 
   /* sections */
   section{padding:22px 0}
@@ -62,7 +68,7 @@
   .contact p{margin:.2rem 0}
   .contact a{word-break:break-all}
 
-  /* legal accordion (native <details>) */
+  /* legal accordion */
   details{border:1px solid var(--line); border-radius:12px; padding:10px 12px; background:#0e0e0e}
   details+details{margin-top:10px}
   summary{cursor:pointer; font-weight:800; outline:none}
@@ -132,7 +138,7 @@
     </div>
   </section>
 
-  <!-- LEISTUNGEN (knackig) -->
+  <!-- LEISTUNGEN -->
   <section id="leistungen">
     <h2>Leistungen</h2>
     <p class="muted" style="margin-bottom:12px">Kurz & klar, was du bekommst.</p>
@@ -143,7 +149,7 @@
     </div>
   </section>
 
-  <!-- ABLAUF (ultra-kurz) -->
+  <!-- ABLAUF -->
   <section id="ablauf">
     <h2>Ablauf</h2>
     <div class="list">
@@ -154,7 +160,7 @@
     </div>
   </section>
 
-  <!-- KONTAKT (kompakt) -->
+  <!-- KONTAKT -->
   <section id="kontakt" class="panel contact">
     <h2>Kontakt</h2>
     <p><strong>PW-3D SOLUTIONS</strong><br>Philipp Wenk<br>Mörikeweg 3<br>89278 Nersingen</p>
@@ -162,7 +168,7 @@
     <p class="muted">Kein Telefonkontakt veröffentlicht.</p>
   </section>
 
-  <!-- RECHTLICHES als Accordion -->
+  <!-- RECHT -->
   <section id="recht">
     <details>
       <summary>Impressum</summary>
@@ -179,11 +185,11 @@
       <summary>Datenschutz</summary>
       <div style="margin-top:10px">
         <p><strong>Verantwortlicher</strong><br>PW-3D SOLUTIONS – Philipp Wenk, Mörikeweg 3, 89278 Nersingen, E-Mail: <a href="mailto:info@pw-3d.de">info@pw-3d.de</a></p>
-        <p><strong>Hosting</strong><br>Statische Bereitstellung (z.&nbsp;B. GitHub Pages/CDN). Beim Aufruf werden technisch notwendige Server-Logdaten verarbeitet (IP, Zeitpunkt, angeforderte Datei) auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherer Bereitstellung).</p>
+        <p><strong>Hosting</strong><br>Statische Bereitstellung (z. B. GitHub Pages/CDN). Beim Aufruf werden technisch notwendige Server-Logdaten verarbeitet (IP, Zeitpunkt, angeforderte Datei) auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherer Bereitstellung).</p>
         <p><strong>Kontakt per E-Mail</strong><br>Daten werden zur Bearbeitung der Anfrage verarbeitet (Art. 6 Abs. 1 lit. b/f DSGVO) und nach Zweckerfüllung gelöscht, sofern keine Aufbewahrungspflichten entgegenstehen.</p>
         <p><strong>Cookies/Tracking</strong><br>Keine Tracking-/Marketing-Cookies. Es werden ausschließlich technisch notwendige Cookies eingesetzt, soweit für die Bereitstellung erforderlich.</p>
         <p><strong>Rechte</strong><br>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch (Art. 15–21 DSGVO). Beschwerderecht bei einer Aufsichtsbehörde.</p>
-        <p class="muted">Hinweis: Diese Muster-Information ist für eine rein statische Seite ohne Formulare/Tracker ausgelegt und ersetzt keine individuelle Rechtsberatung.</p>
+        <p class="muted">Hinweis: Diese Muster‑Information ist für eine rein statische Seite ohne Formulare/Tracker ausgelegt und ersetzt keine individuelle Rechtsberatung.</p>
       </div>
     </details>
   </section>
