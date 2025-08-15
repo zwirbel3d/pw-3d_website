@@ -158,3 +158,32 @@ img{ max-width: 100%; display: block; }
 @media (min-width: 1200px){
   .brand img{ height:72px; }
 }
+
+
+/* Fixed watermark logo at the top (stays on scroll) */
+.logo-watermark{
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 720px);
+  height: 120px;
+  background: url('../assets/logo.svg') no-repeat center / contain;
+  opacity: .08; /* subtle */
+  pointer-events: none;
+  z-index: 0;
+  filter: saturate(120%);
+}
+
+/* Ensure content appears above the watermark */
+.site-header, main, .site-footer{ position: relative; z-index: 1; }
+
+/* On very small screens, reduce height so it doesn't overlap too much */
+@media (max-width: 420px){
+  .logo-watermark{ height: 88px; top: 6px; opacity: .1; }
+}
+
+/* On larger screens, slightly larger watermark */
+@media (min-width: 1200px){
+  .logo-watermark{ height: 140px; opacity: .07; }
+}
