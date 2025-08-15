@@ -8,15 +8,15 @@ permalink: /impressum/
 # Impressum
 
 **Anbieter:**  
-[Philipp Wenk (Einzelunternehmer)]  
-[Anschrift]  
+PW-3D SOLUTIONS – Philipp Wenk  
+Mörikeweg 3, 89278 Nersingen, Deutschland  
 E-Mail: [support@pw-3d.de](mailto:support@pw-3d.de)  
 [Telefon (optional)]
 
 **USt-IdNr.:** [falls vorhanden eintragen]
 
 **Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV:**  
-Philipp Wenk, Anschrift wie oben
+Philipp Wenk, Mörikeweg 3, 89278 Nersingen, Deutschland
 
 **Hinweis:** Die App **CalibraOps** arbeitet offline; es bestehen keine Konten, kein Tracking, keine Werbung.
 

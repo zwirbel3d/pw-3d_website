@@ -8,8 +8,8 @@ permalink: /privacy/
 # Datenschutzerklärung
 
 **Verantwortlich**  
-[Philipp Wenk / pw-3d]  
-[Anschrift]  
+PW-3D SOLUTIONS – Philipp Wenk  
+Mörikeweg 3, 89278 Nersingen, Deutschland  
 E-Mail: [support@pw-3d.de](mailto:support@pw-3d.de)
 
 ## 1. Kurzfassung
