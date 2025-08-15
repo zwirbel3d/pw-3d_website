@@ -388,3 +388,26 @@ body.nav-open{ overflow: hidden; }
   }
 }
 
+
+
+/* iPhone/Safari hard override: make mobile menu fully opaque */
+@media (max-width: 820px){
+  header.site-header .nav.open ul,
+  .site-header .nav.open ul,
+  .site-header .nav ul,
+  .nav.open ul,
+  .nav ul{
+    background-color: #12121a !important; /* opaque */
+    background: #12121a !important;
+    opacity: 1 !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  /* Ensure list items/links don't carry inherited transparency */
+  .nav ul li, .nav ul a{
+    background: transparent !important;
+    opacity: 1 !important;
+    color: var(--text) !important;
+  }
+}
+
