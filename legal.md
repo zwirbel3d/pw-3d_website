@@ -1,7 +1,5 @@
-
 ---
 layout: page
-title: Legal Notice
 permalink: /legal/
 ---
 
