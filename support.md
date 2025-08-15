@@ -7,13 +7,13 @@ permalink: /support/
 
 # Support
 
-Fragen zu **CalibraOps** (iOS/Android)? Schreib uns an **[support@pw-3d.de](mailto:support@pw-3d.de)**.
+Questions about **CalibraOps** (iOS/Android)? Contact us at **[support@pw-3d.de](mailto:support@pw-3d.de)**.
 
-**Schnelle Hilfe:**
+**Quick Help:**
 
-- Mikrofon-Freigabe wird nur im **Belt-Tool** benötigt.
-- Messung klappt nicht? Umgebungslärm reduzieren, in der **Span-Mitte** sanft zupfen, danach kurz dämpfen.
-- Simple-Modus zeigt nur die Hz-Zahl; „Landing-Strip“ und **Richtungs-Coach** gibt es im Standard-Modus.
-- **Toolkit freischalten** (einmalig): Speichern/Presets/Export/Checklists.
+- Microphone access is only required in the **Belt Tool**.
+- Measurement not working? Reduce background noise, pluck the belt gently at its center span, then damp it briefly.
+- Simple Mode shows only the frequency (Hz); “Landing Strip” and **Direction Coach** are available in Standard Mode.
+- **Unlock Toolkit** (one-time): Enables Save/Presets/Export/Checklists.
 
-Weitere Infos: [Datenschutz](/privacy/) • [Impressum](/impressum/)
+More info: [Privacy Policy](/privacy/) • [Legal Notice](/legal/)
