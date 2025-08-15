@@ -54,7 +54,7 @@ img{ max-width: 100%; display: block; }
 }
 
 
-.nav ul{ list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
+.nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
 .nav a{ color: var(--muted); text-decoration: none; }
 .nav a:hover, .nav a:focus{ color: var(--text); }
 .btn-mail{ border: 1px solid var(--border); padding: .45rem .8rem; border-radius: 999px; }
@@ -278,50 +278,24 @@ body.nav-open{ overflow: hidden; }
 }
 
 
-@media (max-width: 820px){
-  /* mobile-menu-links-font */
-  .nav ul a{ font-size: 1.125rem; line-height: 1.5; }  }
+
 @media (min-width: 1200px){  }
 
 
-/* Desktop nav restore */
-@media (min-width: 821px){
-  .nav-toggle{ display: none !important; }
+
   .nav{ position: static; }
-  .nav ul{
-    display: flex !important;
-    position: static !important;
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    gap: 1rem;
-    padding: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-  }
+  .nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
   .nav-backdrop{ display: none !important; }
   body.nav-open{ overflow: auto !important; }
 }
 
 
-.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:1rem; align-items:center; }
+.nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
 
 
 @media (min-width: 821px){
   .nav-toggle{ display: none !important; }
-  .nav ul{
-    display: flex !important;
-    position: static !important;
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    gap: 1rem;
-    background: transparent;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-  }
+  .nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
   .nav-backdrop{ display: none !important; }
 }
 
@@ -340,33 +314,15 @@ body.nav-open{ overflow: hidden; }
 @media (max-width: 820px){ .brand img{ height: 75px; } }
 @media (min-width: 1200px){ .brand img{ height: 100px; } }
 
-/* Desktop nav restore (force visible) */
-@media (min-width: 821px){
-  .nav-toggle{ display: none !important; }
+
   .nav{ position: static; }
-  .nav ul{
-    display: flex !important;
-    position: static !important;
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    gap: 1rem;
-    padding: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-  }
+  .nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
   .nav-backdrop{ display: none !important; }
   body.nav-open{ overflow: auto !important; }
 }
 
 
-@media (max-width: 820px){
-  .nav ul a{
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-}
+
 
 
 
@@ -378,36 +334,53 @@ body.nav-open{ overflow: hidden; }
 
 
 
-@media (max-width: 820px){
-  .nav ul{
-    background: rgb(18,18,26) !important;
-    backdrop-filter: none !important;
-  }
-  .nav ul a{
-    color: var(--text);
-  }
+
 }
 
 
 
 /* iPhone/Safari hard override: make mobile menu fully opaque */
+
+}
+
+
+
+/* Mobile nav definitive rules */
 @media (max-width: 820px){
-  header.site-header .nav.open ul,
-  .site-header .nav.open ul,
-  .site-header .nav ul,
-  .nav.open ul,
+  .nav-toggle{ display: inline-flex !important; align-items: center; justify-content: center; }
   .nav ul{
-    background-color: #12121a !important; /* opaque */
-    background: #12121a !important;
-    opacity: 1 !important;
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
+    display: none !important;
+    position: fixed; top: 64px; right: 12px; left: 12px;
+    gap: .6rem; padding: .8rem;
+    background: #12121a !important; /* fully opaque */
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    z-index: 70;
+    opacity: 1 !important; /* ensure no inherited transparency */
+    transform: translateY(0); /* no slide if previously set */
+    pointer-events: auto;
   }
-  /* Ensure list items/links don't carry inherited transparency */
-  .nav ul li, .nav ul a{
+  .nav.open ul{ display: grid !important; }
+  .nav ul a{ color: var(--text) !important; }
+  .nav-backdrop{ display: block !important; }
+}
+
+
+
+/* Desktop nav visible */
+@media (min-width: 821px){
+  .nav-toggle{ display: none !important; }
+  .nav ul{
+    display: flex !important;
+    position: static !important;
     background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     opacity: 1 !important;
-    color: var(--text) !important;
+    transform: none !important;
+    pointer-events: auto !important;
   }
+  .nav-backdrop{ display: none !important; }
 }
 
