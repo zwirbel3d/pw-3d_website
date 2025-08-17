@@ -44,4 +44,15 @@
       cookieBanner.classList.remove('show');
     });
   }
+
+  // Mobile navigation
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (navToggle && nav){
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  }
 })();
