@@ -1,47 +1,58 @@
 // Minimal, privacy-first JS: reveal animations + cookie banner + dynamic year
-(function(){
+(() => {
   // Year
-  var y = document.getElementById('year');
+  const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
   // Reveal on view
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReduced && 'IntersectionObserver' in window){
-    var revealEls = [].slice.call(document.querySelectorAll('.reveal'));
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           io.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
-    revealEls.forEach(function(el){ io.observe(el); });
+    revealEls.forEach(el => io.observe(el));
   } else {
-    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
   // Minimal cookie (technically necessary, for remembering dismissal)
-  function getCookie(name){
-    var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + '=([^;]*)'));
-    return m ? decodeURIComponent(m[1]) : null;
-  }
-  function setCookie(name, value, days){
-    var maxAge = days ? '; max-age=' + (days*24*60*60) : '';
-    document.cookie = name + '=' + encodeURIComponent(value) + maxAge + '; path=/; SameSite=Lax';
-  }
+  const getCookie = name => {
+    const match = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+    return match ? decodeURIComponent(match.split('=')[1]) : null;
+  };
+  const setCookie = (name, value, days) => {
+    const maxAge = days ? `; max-age=${days*24*60*60}` : '';
+    document.cookie = `${name}=${encodeURIComponent(value)}${maxAge}; path=/; SameSite=Lax; Secure`;
+  };
 
-  var cookieBanner = document.querySelector('.cookie');
-  var acceptBtn = document.getElementById('cookie-accept');
+  const cookieBanner = document.querySelector('.cookie');
+  const acceptBtn = document.getElementById('cookie-accept');
 
   if (cookieBanner && acceptBtn){
-    var consent = getCookie('pw3d_consent');
+    const consent = getCookie('pw3d_consent');
     if (!consent){
-      setTimeout(function(){ cookieBanner.classList.add('show'); }, 200);
+      setTimeout(() => { cookieBanner.classList.add('show'); }, 200);
     }
-    acceptBtn.addEventListener('click', function(){
+    acceptBtn.addEventListener('click', () => {
       setCookie('pw3d_consent', 'necessary', 365);
       cookieBanner.classList.remove('show');
+    });
+  }
+
+  // Mobile navigation
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (navToggle && nav){
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
     });
   }
 })();

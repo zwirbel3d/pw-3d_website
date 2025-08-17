@@ -24,6 +24,16 @@ body{
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../assets/logo.svg") center/60vmin no-repeat;
+  opacity: .04;
+  pointer-events: none;
 }
 
 img{ max-width: 100%; display: block; }
@@ -44,20 +54,29 @@ img{ max-width: 100%; display: block; }
 /* Header */
 .site-header{
   position: sticky; top: 0; z-index: 50;
-  background: rgba(11,11,15,.7);
+  background: rgba(11,11,15,.95);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
 }
 .header-inner{
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; position: relative;
   padding: .8rem 0;
 }
+.nav{ margin-left: auto; }
+.nav-toggle{ display: none; background: none; border: none; color: var(--text); font-size: 1.6rem; cursor: pointer; }
 
 
-.nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
+.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:1rem; align-items:center; }
 .nav a{ color: var(--muted); text-decoration: none; }
 .nav a:hover, .nav a:focus{ color: var(--text); }
 .btn-mail{ border: 1px solid var(--border); padding: .45rem .8rem; border-radius: 999px; }
+
+@media (max-width: 640px){
+  .nav-toggle{ display:block; }
+  .nav{ display:none; position:absolute; top:100%; left:0; margin:0; background:rgba(11,11,15,.95); padding:1rem; border:1px solid var(--border); border-radius:var(--radius); }
+  .nav.open{ display:block; }
+  .nav ul{ flex-direction:column; gap:.8rem; align-items:flex-start; }
+}
 
 /* Hero */
 .hero{  }
@@ -146,213 +165,3 @@ img{ max-width: 100%; display: block; }
 @media (min-width: 1152px){
   .footer-inner{ flex-direction: row; justify-content: space-between; align-items: center; }
 }
-
-
-@media (max-width: 672px){
-  
-}
-@media (min-width: 1920px){
-  
-}
-
-
-/* Fixed watermark logo at the top (stays on scroll) */
-
-
-/* Ensure content is above the watermark */
-.site-header, main, .site-footer{ position: relative; z-index: 2; }
-
-@media (max-width: 672px){
-  
-}
-
-@media (min-width: 1920px){
-  
-}
-
-/* On very small screens, reduce height so it doesn't overlap too much */
-@media (max-width: 672px){
-  
-}
-
-/* On larger screens, slightly larger watermark */
-@media (min-width: 1920px){
-  
-}
-
-
-/* Mobile nav */
-
-
-
-
-
-
-.nav-open 
-.nav-open 
-.nav-open 
-
-/* Backdrop for menu */
-
-body.nav-open{ overflow: hidden; }
-
-
-  .nav ul{
-    position: fixed; top: 64px; right: 12px; left: 12px;
-    display: grid; gap: .6rem; padding: .8rem;
-    background: rgb(18, 18, 26);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    z-index: 70;
-    transform: translateY(-8px);
-    opacity: 0; pointer-events: none;
-    transition: opacity .18s ease, transform .18s ease;
-  }
-  .nav ul a{ padding: .6rem .8rem; display: block; }
-  .nav ul:focus-visible{ outline: none; }
-  
-  /* Hide desktop nav layout */
-  .nav ul{ gap: .2rem; }
-}
-
-/* Desktop keeps current layout */
-
-
-
-.site-header, main, .site-footer{ position: relative; z-index: 2; }
-
-@media (max-width: 672px){
-  
-  
-}
-@media (min-width: 1920px){
-  
-  
-}
-
-
-@media (max-width: 1312px){
-  
-  .nav ul{
-    display: none;
-    position: fixed; top: 64px; right: 12px; left: 12px;
-    gap: .6rem; padding: .8rem;
-    background: rgb(18, 18, 26);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    z-index: 70;
-    opacity: 0; pointer-events: none;
-    transform: translateY(-8px);
-    transition: opacity .18s ease, transform .18s ease;
-  }
-  
-  /* Hide any desktop nav spacing quirks */
-  .nav ul li{ margin: 0; }
-}
-
-
-
-@media (min-width: 1200px){  }
-
-
-
-  .nav{ position: static; }
-  .nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
-  
-  body.nav-open{ overflow: auto !important; }
-}
-
-
-.nav ul{ list-style:none; margin:0; padding:0; gap:1rem; align-items:center; }
-
-
-
-  
-}
-
-
-
-.hero{
-  
-}
-.hero-inner{
-  min-height: 28vh;
-}
-
-
-/* Header logo sizes (25% larger than previous desktop) */
-.brand img{ height: 94px; width: auto; }
-
-  
-  body.nav-open{ overflow: auto !important; }
-}
-
-
-
-
-
-
-
-  header .nav ul a{
-    color: var(--text);
-  }
-}
-
-
-
-
-}
-
-
-
-/* iPhone/Safari hard override: make mobile menu fully opaque */
-
-}
-
-
-
-/* Mobile nav definitive rules */
-
-  
-  .nav ul a{ color: var(--text) !important; }
-  
-}
-
-
-
-/* Desktop nav visible */
-
-  
-}
-
-
-
-/* Always-visible navigation (no burger) */
-.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:.8rem; align-items:center; flex-wrap:wrap; }
-.nav a{ padding:.45rem .7rem; border:1px solid var(--border); border-radius:999px; text-decoration:none; color:var(--muted); }
-.nav a:hover, .nav a:focus{ color:var(--text); border-color:#2a2a36; }
-
-
-
-@media (max-width: 520px){
-  .nav a{ padding:.35rem .55rem; font-size:.95rem; }
-  .header-inner{ gap:.4rem; }
-}
-
-
-
-/* Simple always-visible navigation */
-.nav ul{ list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
-.nav a{ color: var(--muted); text-decoration: none; }
-.nav a:hover, .nav a:focus{ color: var(--text); }
-
-
-
-@media (max-width: 520px){
-  .nav ul{ gap: .6rem; }
-  .nav a{ font-size: .95rem; }
-  .brand img{ height: 68px; } /* keep logo large but slightly adjusted */
-}
-
