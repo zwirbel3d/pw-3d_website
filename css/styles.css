@@ -73,7 +73,7 @@ img{ max-width: 100%; display: block; }
 
 @media (max-width: 640px){
   .nav-toggle{ display:block; }
-  .nav{ display:none; position:absolute; top:100%; right:0; background:rgba(11,11,15,.95); padding:1rem; border:1px solid var(--border); border-radius:var(--radius); }
+  .nav{ display:none; position:absolute; top:100%; left:0; background:rgba(11,11,15,.95); padding:1rem; border:1px solid var(--border); border-radius:var(--radius); }
   .nav.open{ display:block; }
   .nav ul{ flex-direction:column; gap:.8rem; align-items:flex-start; }
 }
