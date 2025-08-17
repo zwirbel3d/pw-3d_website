@@ -128,7 +128,7 @@ img{ max-width: 100%; display: block; }
 
 /* Contact & Legal */
 .contact{ padding: 1rem 0 2.5rem; }
-.contact-logo{ max-width:662px; margin:0 0 1rem; }
+.contact-logo{ max-width:662px; margin:0 0 1rem; margin-left:-1.6%; }
 .legal{ padding: 1rem 0; border-top: 1px solid var(--border); }
 .ds-list{ margin: .8rem 0 0; padding-left: 1.1rem; color: var(--muted); }
 
