@@ -12,8 +12,6 @@ Mörikeweg 3, 89278 Nersingen, Germany
 VAT ID: DE452616006  
 Email: [support@pw-3d.de](mailto:support@pw-3d.de)
 
-## 1. Summary
-
 
 ## 1. Summary
 CalibraOps is an **offline-first** iOS app for 3D-printer belt tuning and maintenance. We do **not** run app servers, collect analytics, or show ads. All microphone processing happens **on-device**.  
