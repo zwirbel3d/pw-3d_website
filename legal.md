@@ -16,7 +16,7 @@ Email: [support@pw-3d.de](mailto:support@pw-3d.de)
 **Person responsible for content under § 18(2) MStV (Germany):**  
 Philipp Wenk, Mörikeweg 3, 89278 Nersingen, Germany
 
-**Note:** The **CalibraOps** app works offline; no accounts, no tracking, no advertising.
+**Note:** The **CalibraOps™** app works offline; no accounts, no tracking, no advertising.
 
 **Dispute Resolution:** The European Commission provides a platform for online dispute resolution: <https://ec.europa.eu/consumers/odr>  
 We are not obligated or willing to participate in dispute resolution proceedings before a consumer arbitration board.

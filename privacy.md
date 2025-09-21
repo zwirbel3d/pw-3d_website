@@ -14,7 +14,7 @@ Email: [support@pw-3d.de](mailto:support@pw-3d.de)
 
 ## 1. Summary
 
-- The **CalibraOps** app works **entirely offline**.
+- The **CalibraOps™** app works **entirely offline**.
 - **Microphone access** is used **only** for belt tuning; audio never leaves the device and is **not stored**.
 - No accounts, no tracking, no advertising.
 
