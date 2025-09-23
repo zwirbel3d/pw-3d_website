@@ -4,3 +4,4 @@ PW-3D SOLUTIONS – B2B One-Pager (GitHub Pages)
 - sitemap.xml
 - assets/pw3d-logo.png (Fallback; lade dein SVG als assets/pw3d-logo.svg hoch)
 - assets/favicon.png
+- https://pw-3d.de
