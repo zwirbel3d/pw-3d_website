@@ -1,7 +1,8 @@
-PW-3D SOLUTIONS – B2B One-Pager (GitHub Pages)
-- index.html (live)
-- robots.txt
-- sitemap.xml
-- assets/pw3d-logo.png (Fallback; lade dein SVG als assets/pw3d-logo.svg hoch)
-- assets/favicon.png
-- https://pw-3d.de
+# PW-3D SOLUTIONS
+
+Dies ist das Quell-Repository für die Website von **PW-3D SOLUTIONS**.  
+Die offizielle Seite ist erreichbar unter:
+
+👉 [https://pw-3d.de](https://pw-3d.de)
+
+---
