@@ -98,20 +98,20 @@ header{
 }
 
 .hero{
-  padding:42px 0 34px
+  padding:46px 0 38px
 }
 
 .hero h1{
   font-size:var(--fs-h1);
   line-height:1.18;
-  margin:8px 0 14px;
-  max-width:760px
+  margin:8px 0 16px;
+  max-width:820px
 }
 
 .hero p{
   color:var(--muted);
   margin:10px 0 20px;
-  max-width:720px;
+  max-width:760px;
   font-size:1.05rem
 }
 
@@ -164,27 +164,10 @@ h2{
   max-width:760px
 }
 
-.list{
-  display:grid;
-  gap:10px;
-  margin-top:16px
-}
-
-.item{
-  padding:16px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:var(--panel2)
-}
-
-.item strong{
-  display:block;
-  margin-bottom:3px
-}
-
 .grid{
   display:grid;
-  gap:12px
+  gap:12px;
+  margin-top:18px
 }
 
 @media (min-width:700px){
@@ -210,10 +193,21 @@ h2{
   color:var(--muted)
 }
 
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:20px
+}
+
+.panel p{
+  max-width:780px
+}
+
 .process{
   display:grid;
-  gap:12px;
-  margin-top:18px
+  gap:14px;
+  margin-top:20px
 }
 
 .step{
@@ -239,24 +233,11 @@ h2{
   margin-bottom:2px
 }
 
-.panel{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:var(--r);
-  padding:20px
-}
-
-.material{
-  margin-top:12px
-}
-
-.material p{
-  margin:8px 0
-}
-
-.cta{
-  margin-top:10px;
-  text-align:left
+.examples{
+  min-height:180px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center
 }
 
 .contact p{
@@ -355,6 +336,7 @@ footer{
 
 <header>
   <div class="wrap bar">
+
     <div class="brand">
       <img
         src="assets/pw3d-logo.svg"
@@ -365,12 +347,15 @@ footer{
     </div>
 
     <a class="btn alt" href="#kontakt">Bauteil anfragen</a>
+
   </div>
 </header>
+
 
 <main class="wrap">
 
 <section class="hero">
+
   <div class="reveal">
 
     <h1>
@@ -378,18 +363,24 @@ footer{
     </h1>
 
     <p>
-      Funktionsteile, Halterungen, Montagehilfen, Vorrichtungen und Kleinserien –
-      individuell gefertigt nach Ihrer Anwendung, Ihren Anforderungen und Ihren Daten.
+      Individuelle Funktionsteile, Halterungen, Montagehilfen, Vorrichtungen
+      und Kleinserien – gefertigt passend zu Ihrer Anwendung und Ihren
+      technischen Anforderungen.
     </p>
 
     <div style="display:flex;gap:.6rem;flex-wrap:wrap">
-      <a class="btn" href="mailto:info@pw-3d.de?subject=Anfrage%20technisches%20Bauteil">
+
+      <a
+        class="btn"
+        href="mailto:info@pw-3d.de?subject=Anfrage%20technisches%20Bauteil"
+      >
         Bauteil anfragen
       </a>
 
       <a class="btn alt" href="#leistungen">
-        Leistungen ansehen
+        Leistungen
       </a>
+
     </div>
 
     <p class="hero-note">
@@ -398,67 +389,94 @@ footer{
     </p>
 
   </div>
+
 </section>
 
 
 <section id="leistungen">
 
-  <h2 class="reveal">Technische Fertigung für den praktischen Einsatz</h2>
+  <h2 class="reveal">
+    Technische Bauteile für den praktischen Einsatz
+  </h2>
 
   <p class="muted intro reveal">
     PW-3D SOLUTIONS fertigt individuelle Kunststoffteile für Maschinen,
-    Anlagen und technische Anwendungen – vom einzelnen Funktionsteil bis
-    zur Kleinserie.
+    Anlagen und technische Arbeitsabläufe – vom einzelnen Funktionsteil
+    bis zur Kleinserie.
   </p>
+
 
   <div class="grid">
 
     <div class="card reveal">
+
       <h3>Funktionsteile</h3>
+
       <p>
         Individuelle Bauteile, Adapter, Abdeckungen, Führungen und
         weitere Komponenten für technische Anwendungen.
       </p>
+
     </div>
 
+
     <div class="card reveal">
+
       <h3>Halterungen</h3>
+
       <p>
-        Individuelle Halterungen für Sensoren, Leitungen,
-        Komponenten und Baugruppen.
+        Passgenaue Halterungen für Sensoren, Leitungen, Komponenten
+        und Baugruppen.
       </p>
+
     </div>
 
+
     <div class="card reveal">
+
       <h3>Montagehilfen</h3>
+
       <p>
-        Passgenaue Hilfsmittel für Montage, Positionierung,
-        Ausrichtung und wiederkehrende Arbeitsabläufe.
+        Individuelle Hilfsmittel für Positionierung, Ausrichtung,
+        Montage und wiederkehrende Arbeitsabläufe.
       </p>
+
     </div>
 
+
     <div class="card reveal">
+
       <h3>Vorrichtungen</h3>
+
       <p>
-        Praktische Fertigungs- und Montagevorrichtungen,
-        die sich mit additiver Fertigung schnell individuell realisieren lassen.
+        Fertigungs- und Montagevorrichtungen, die sich individuell
+        auf Bauteil und Prozess abstimmen lassen.
       </p>
+
     </div>
 
+
     <div class="card reveal">
+
       <h3>Kleinserien</h3>
+
       <p>
-        Kleine Stückzahlen wirtschaftlich fertigen –
-        ohne eigene Werkzeuge oder Formen herstellen zu müssen.
+        Kleine Stückzahlen wirtschaftlich fertigen – ohne hohe
+        Werkzeug- oder Einrichtungskosten.
       </p>
+
     </div>
 
+
     <div class="card reveal">
-      <h3>Prototypen</h3>
+
+      <h3>Prototypen & Funktionsmuster</h3>
+
       <p>
-        Schnelle Funktionsmuster zur Entwicklung, Erprobung
-        und Weiterentwicklung technischer Konstruktionen.
+        Schnelle Bauteile zur Erprobung, Weiterentwicklung und
+        technischen Validierung von Konstruktionen.
       </p>
+
     </div>
 
   </div>
@@ -470,7 +488,9 @@ footer{
 
   <div class="panel reveal">
 
-    <h2>Fertigung passend zur Anwendung</h2>
+    <h2>
+      Fertigung passend zur Anwendung
+    </h2>
 
     <p class="muted">
       Das Bauteil bestimmt die Anforderungen an Material und Fertigung –
@@ -479,17 +499,19 @@ footer{
 
     <p>
       Mechanische Belastung, Temperatur, Umgebung, Chemikalien,
-      Maßhaltigkeit und gewünschte Stückzahl bestimmen die geeignete
+      Maßhaltigkeit, Einsatzdauer und Stückzahl bestimmen die geeignete
       technische Lösung.
     </p>
 
     <p>
-      Der Fokus liegt deshalb nicht auf einer festen Materialliste,
-      sondern auf einer für die jeweilige Anwendung sinnvollen
-      Kombination aus Konstruktion, Werkstoff und Fertigungsverfahren.
+      Deshalb steht nicht eine feste Materialliste im Mittelpunkt,
+      sondern die passende Kombination aus Konstruktion, Werkstoff
+      und Fertigungsverfahren.
     </p>
 
-    <a href="#kontakt">Technische Anwendung besprechen →</a>
+    <a href="#kontakt">
+      Technische Anwendung besprechen →
+    </a>
 
   </div>
 
@@ -498,52 +520,77 @@ footer{
 
 <section id="ablauf">
 
-  <h2 class="reveal">Von der Anfrage zum fertigen Bauteil</h2>
+  <h2 class="reveal">
+    Von der Anfrage zum fertigen Bauteil
+  </h2>
 
   <p class="muted reveal">
-    Technische Projekte werden individuell geprüft und abgestimmt.
+    Jede technische Anfrage wird individuell geprüft und abgestimmt.
   </p>
+
 
   <div class="process">
 
     <div class="step reveal">
+
       <div class="number">01</div>
+
       <div>
         <strong>Anfrage senden</strong>
+
         <span class="muted">
-          CAD-Datei, Zeichnung, Skizze oder Beschreibung der Anwendung übermitteln.
+          CAD-Datei, Zeichnung, Skizze oder Beschreibung der Anwendung
+          übermitteln.
         </span>
       </div>
+
     </div>
 
+
     <div class="step reveal">
+
       <div class="number">02</div>
+
       <div>
         <strong>Technische Prüfung</strong>
+
         <span class="muted">
-          Anforderungen, Geometrie, Material und Fertigungsmöglichkeiten werden geprüft.
+          Geometrie, Anforderungen, Material und Fertigungsmöglichkeiten
+          werden geprüft.
         </span>
       </div>
+
     </div>
 
+
     <div class="step reveal">
+
       <div class="number">03</div>
+
       <div>
         <strong>Angebot</strong>
+
         <span class="muted">
           Preis, Stückzahl und Lieferzeit werden individuell abgestimmt.
         </span>
       </div>
+
     </div>
 
+
     <div class="step reveal">
+
       <div class="number">04</div>
+
       <div>
         <strong>Fertigung & Lieferung</strong>
+
         <span class="muted">
-          Nach Freigabe werden die Bauteile gefertigt und termingerecht bereitgestellt.
+          Nach Freigabe werden die Bauteile gefertigt und bereitgestellt
+          oder geliefert.
         </span>
       </div>
+
     </div>
 
   </div>
@@ -553,18 +600,15 @@ footer{
 
 <section>
 
-  <div class="panel reveal">
+  <div class="panel examples reveal">
 
-    <h2>Beispiele aus der Fertigung</h2>
+    <h2>
+      Ausgewählte Anwendungen
+    </h2>
 
     <p class="muted">
-      Technische Bauteile werden immer passend zur jeweiligen Anwendung entwickelt
-      und gefertigt.
-    </p>
-
-    <p>
       Hier entsteht künftig eine Auswahl neutraler Demonstrator-Bauteile,
-      die typische Anwendungen und Möglichkeiten der Fertigung zeigen.
+      die typische technische Anwendungen und Fertigungsmöglichkeiten zeigen.
     </p>
 
     <p class="muted">
@@ -581,7 +625,9 @@ footer{
 
   <div class="panel reveal">
 
-    <h2>Direkter Ansprechpartner für technische Projekte</h2>
+    <h2>
+      Direkter Ansprechpartner für technische Projekte
+    </h2>
 
     <p>
       Ich bin <strong>Philipp Wenk</strong>, Gründer von
@@ -596,7 +642,7 @@ footer{
     </p>
 
     <p class="muted">
-      Kurze Wege, direkte technische Abstimmung und eine pragmatische
+      Direkte technische Abstimmung, kurze Wege und eine pragmatische
       Umsetzung stehen dabei im Vordergrund.
     </p>
 
@@ -609,11 +655,14 @@ footer{
 
   <div class="panel contact reveal">
 
-    <h2>Technisches Bauteil anfragen</h2>
+    <h2>
+      Technisches Bauteil anfragen
+    </h2>
 
     <p class="muted">
       Sie haben bereits CAD-Daten, eine Zeichnung oder nur eine erste Idee?
-      Schicken Sie mir die verfügbaren Informationen und die gewünschte Stückzahl.
+      Schicken Sie die verfügbaren Informationen und die gewünschte Stückzahl
+      einfach per E-Mail.
     </p>
 
     <p>
@@ -631,12 +680,14 @@ footer{
     </p>
 
     <div style="margin-top:16px">
+
       <a
         class="btn"
         href="mailto:info@pw-3d.de?subject=Anfrage%20technisches%20Bauteil"
       >
         Anfrage senden
       </a>
+
     </div>
 
   </div>
@@ -647,6 +698,7 @@ footer{
 <section id="recht">
 
   <details class="reveal">
+
     <summary>Impressum</summary>
 
     <div style="margin-top:10px">
@@ -660,7 +712,9 @@ footer{
       <p>
         <strong>Kontakt</strong><br>
         E-Mail:
-        <a href="mailto:info@pw-3d.de">info@pw-3d.de</a>
+        <a href="mailto:info@pw-3d.de">
+          info@pw-3d.de
+        </a>
       </p>
 
       <p>
@@ -673,10 +727,12 @@ footer{
       </p>
 
     </div>
+
   </details>
 
 
   <details class="reveal">
+
     <summary>Datenschutz</summary>
 
     <div style="margin-top:10px">
@@ -686,7 +742,9 @@ footer{
         PW-3D SOLUTIONS – Philipp Wenk,
         Mörikeweg 3, 89278 Nersingen,
         E-Mail:
-        <a href="mailto:info@pw-3d.de">info@pw-3d.de</a>
+        <a href="mailto:info@pw-3d.de">
+          info@pw-3d.de
+        </a>
       </p>
 
       <p>
@@ -730,31 +788,49 @@ footer{
     class="wrap"
     style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"
   >
+
     <div>
       © <span id="y"></span> PW-3D SOLUTIONS
     </div>
 
     <div>
-      <a href="#recht">Impressum & Datenschutz</a>
+      <a href="#recht">
+        Impressum & Datenschutz
+      </a>
     </div>
+
   </div>
 
 </footer>
 
 
 <script>
-document.getElementById('y').textContent = new Date().getFullYear();
+
+document.getElementById('y').textContent =
+  new Date().getFullYear();
+
 
 const obs = new IntersectionObserver((entries)=>{
+
   entries.forEach(e=>{
+
     if(e.isIntersecting){
+
       e.target.classList.add('show');
+
       obs.unobserve(e.target);
+
     }
+
   });
+
 },{threshold:.15});
 
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+document
+  .querySelectorAll('.reveal')
+  .forEach(el=>obs.observe(el));
+
 </script>
 
 </body>
