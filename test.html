@@ -83,13 +83,35 @@ header{
   gap:12px
 }
 
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0
+}
+
 .brand img{
-  width:36px;
-  height:36px;
+  display:block;
+  width:36px !important;
+  height:36px !important;
+  max-width:36px !important;
+  max-height:36px !important;
+  min-width:36px;
+  min-height:36px;
+  object-fit:contain;
+  flex:0 0 36px;
   background:#fff;
   border-radius:8px;
   padding:4px;
   box-shadow:0 0 0 1px #2a2a2a
+}
+
+.brand-name{
+  font-weight:900;
+  letter-spacing:.2px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
 }
 
 .brand-name{
