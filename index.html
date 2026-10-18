@@ -4,13 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Technische Kunststoffteile für Maschinenbau & Industrie – PW-3D SOLUTIONS</title>
+<title>3D-Druck für Industrie in Ulm / Neu-Ulm | PW-3D SOLUTIONS</title>
 
-<meta name="description" content="Technische Kunststoffteile für Maschinenbau, Anlagenbau und Industrie. Funktionsteile, Halterungen, Montagehilfen, Vorrichtungen und Kleinserien – individuell gefertigt von PW-3D SOLUTIONS bei Ulm.">
+<meta name="description" content="Technischer 3D-Druck in Nersingen bei Ulm / Neu-Ulm: Funktionsteile, Vorrichtungen, Prototypen und Kleinserien für Maschinenbau und Industrie. Jetzt Bauteil anfragen.">
 
 <link rel="canonical" href="https://pw-3d.de/">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="PW-3D SOLUTIONS">
+<meta property="og:title" content="3D-Druck für Industrie in Ulm / Neu-Ulm | PW-3D SOLUTIONS">
+<meta property="og:description" content="Funktionsteile, Vorrichtungen, Prototypen und Kleinserien aus technischen Kunststoffen. Individuell gefertigt in Nersingen bei Ulm / Neu-Ulm.">
+<meta property="og:url" content="https://pw-3d.de/">
+<meta property="og:image" content="https://pw-3d.de/assets/pw3d-logo.png">
+<meta property="og:image:alt" content="PW-3D SOLUTIONS Logo">
 
 <style>
 :root{
@@ -60,6 +68,12 @@ a{
   text-underline-offset:2px
 }
 
+a:focus-visible,
+summary:focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:4px
+}
+
 header{
   padding:14px 0;
   border-bottom:1px solid var(--line);
@@ -73,12 +87,6 @@ header{
 .bar{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  gap:12px
-}
-
-.brand{
-  display:flex;
   align-items:center;
   gap:12px
 }
@@ -112,11 +120,6 @@ header{
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis
-}
-
-.brand-name{
-  font-weight:900;
-  letter-spacing:.2px
 }
 
 .hero{
@@ -169,7 +172,8 @@ header{
 }
 
 section{
-  padding:28px 0
+  padding:28px 0;
+  scroll-margin-top:140px
 }
 
 h2{
@@ -255,13 +259,6 @@ h2{
   margin-bottom:2px
 }
 
-.examples{
-  min-height:180px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center
-}
-
 .contact p{
   margin:.2rem 0
 }
@@ -283,12 +280,7 @@ details+details{
 
 summary{
   cursor:pointer;
-  font-weight:800;
-  outline:none
-}
-
-summary::-webkit-details-marker{
-  display:none
+  font-weight:800
 }
 
 footer{
@@ -298,25 +290,17 @@ footer{
   font-size:.95rem
 }
 
-.reveal{
-  opacity:0;
-  transform:translateY(20px)
-}
-
-.reveal.show{
-  opacity:1;
-  transform:none;
-  transition:opacity .7s ease,transform .7s ease
-}
-
 @media (prefers-reduced-motion:reduce){
-  .reveal{
-    opacity:1;
-    transform:none
+  html{
+    scroll-behavior:auto
   }
 
-  .reveal.show{
+  .btn{
     transition:none
+  }
+
+  .btn:hover{
+    transform:none
   }
 }
 </style>
@@ -327,6 +311,8 @@ footer{
   "@type":"LocalBusiness",
   "name":"PW-3D SOLUTIONS",
   "url":"https://pw-3d.de/",
+  "logo":"https://pw-3d.de/assets/pw3d-logo.png",
+  "description":"Technischer 3D-Druck für Maschinenbau und Industrie: Funktionsteile, Vorrichtungen, Prototypen und Kleinserien in Nersingen bei Ulm / Neu-Ulm.",
   "email":"info@pw-3d.de",
   "vatID":"DE452616006",
   "address":{
@@ -361,9 +347,10 @@ footer{
 
     <div class="brand">
       <img
-        src="assets/pw3d-logo.svg"
+        src="assets/logo.svg"
         alt="PW-3D SOLUTIONS Logo"
-        onerror="this.src='assets/pw3d-logo.png'"
+        width="36"
+        height="36"
       >
       <div class="brand-name">PW-3D SOLUTIONS</div>
     </div>
@@ -378,15 +365,16 @@ footer{
 
 <section class="hero">
 
-  <div class="reveal">
+  <div>
 
     <h1>
-      Technische Kunststoffteile für Maschinenbau, Anlagenbau und Industrie
+      Technischer 3D-Druck für Maschinenbau und Industrie
     </h1>
 
     <p>
       Individuelle Funktionsteile, Halterungen, Montagehilfen, Vorrichtungen
-      und Kleinserien – gefertigt passend zu Ihrer Anwendung und Ihren
+      und Kleinserien aus technischen Kunststoffen. Gefertigt in Nersingen
+      bei Ulm / Neu-Ulm – abgestimmt auf Ihre Anwendung und Ihre
       technischen Anforderungen.
     </p>
 
@@ -417,20 +405,20 @@ footer{
 
 <section id="leistungen">
 
-  <h2 class="reveal">
+  <h2>
     Technische Bauteile für den praktischen Einsatz
   </h2>
 
-  <p class="muted intro reveal">
-    PW-3D SOLUTIONS fertigt individuelle Kunststoffteile für Maschinen,
-    Anlagen und technische Arbeitsabläufe – vom einzelnen Funktionsteil
-    bis zur Kleinserie.
+  <p class="muted intro">
+    PW-3D SOLUTIONS fertigt individuelle Kunststoffteile im 3D-Druck
+    für Maschinen, Anlagen und technische Arbeitsabläufe – vom einzelnen
+    Funktionsteil über Prototypen bis zur Kleinserie.
   </p>
 
 
   <div class="grid">
 
-    <div class="card reveal">
+    <div class="card">
 
       <h3>Funktionsteile</h3>
 
@@ -442,7 +430,7 @@ footer{
     </div>
 
 
-    <div class="card reveal">
+    <div class="card">
 
       <h3>Halterungen</h3>
 
@@ -454,7 +442,7 @@ footer{
     </div>
 
 
-    <div class="card reveal">
+    <div class="card">
 
       <h3>Montagehilfen</h3>
 
@@ -466,7 +454,7 @@ footer{
     </div>
 
 
-    <div class="card reveal">
+    <div class="card">
 
       <h3>Vorrichtungen</h3>
 
@@ -478,7 +466,7 @@ footer{
     </div>
 
 
-    <div class="card reveal">
+    <div class="card">
 
       <h3>Kleinserien</h3>
 
@@ -490,7 +478,7 @@ footer{
     </div>
 
 
-    <div class="card reveal">
+    <div class="card">
 
       <h3>Prototypen & Funktionsmuster</h3>
 
@@ -508,7 +496,7 @@ footer{
 
 <section>
 
-  <div class="panel reveal">
+  <div class="panel">
 
     <h2>
       Fertigung passend zur Anwendung
@@ -542,18 +530,18 @@ footer{
 
 <section id="ablauf">
 
-  <h2 class="reveal">
+  <h2>
     Von der Anfrage zum fertigen Bauteil
   </h2>
 
-  <p class="muted reveal">
+  <p class="muted">
     Jede technische Anfrage wird individuell geprüft und abgestimmt.
   </p>
 
 
   <div class="process">
 
-    <div class="step reveal">
+    <div class="step">
 
       <div class="number">01</div>
 
@@ -569,7 +557,7 @@ footer{
     </div>
 
 
-    <div class="step reveal">
+    <div class="step">
 
       <div class="number">02</div>
 
@@ -585,7 +573,7 @@ footer{
     </div>
 
 
-    <div class="step reveal">
+    <div class="step">
 
       <div class="number">03</div>
 
@@ -600,7 +588,7 @@ footer{
     </div>
 
 
-    <div class="step reveal">
+    <div class="step">
 
       <div class="number">04</div>
 
@@ -620,32 +608,9 @@ footer{
 </section>
 
 
-<section>
-
-  <div class="panel examples reveal">
-
-    <h2>
-      Ausgewählte Anwendungen
-    </h2>
-
-    <p class="muted">
-      Hier entsteht künftig eine Auswahl neutraler Demonstrator-Bauteile,
-      die typische technische Anwendungen und Fertigungsmöglichkeiten zeigen.
-    </p>
-
-    <p class="muted">
-      Kundenspezifische Bauteile und Konstruktionsdaten werden selbstverständlich
-      vertraulich behandelt und nicht ohne Zustimmung veröffentlicht.
-    </p>
-
-  </div>
-
-</section>
-
-
 <section id="ueber">
 
-  <div class="panel reveal">
+  <div class="panel">
 
     <h2>
       Direkter Ansprechpartner für technische Projekte
@@ -675,7 +640,7 @@ footer{
 
 <section id="kontakt">
 
-  <div class="panel contact reveal">
+  <div class="panel contact">
 
     <h2>
       Technisches Bauteil anfragen
@@ -685,6 +650,11 @@ footer{
       Sie haben bereits CAD-Daten, eine Zeichnung oder nur eine erste Idee?
       Schicken Sie die verfügbaren Informationen und die gewünschte Stückzahl
       einfach per E-Mail.
+    </p>
+
+    <p class="muted">
+      Kundenspezifische Bauteile und Konstruktionsdaten werden vertraulich
+      behandelt und nicht ohne Zustimmung veröffentlicht.
     </p>
 
     <p>
@@ -719,7 +689,7 @@ footer{
 
 <section id="recht">
 
-  <details class="reveal">
+  <details>
 
     <summary>Impressum</summary>
 
@@ -753,7 +723,7 @@ footer{
   </details>
 
 
-  <details class="reveal">
+  <details>
 
     <summary>Datenschutz</summary>
 
@@ -812,7 +782,7 @@ footer{
   >
 
     <div>
-      © <span id="y"></span> PW-3D SOLUTIONS
+      © <span id="y">2026</span> PW-3D SOLUTIONS
     </div>
 
     <div>
@@ -827,32 +797,8 @@ footer{
 
 
 <script>
-
 document.getElementById('y').textContent =
   new Date().getFullYear();
-
-
-const obs = new IntersectionObserver((entries)=>{
-
-  entries.forEach(e=>{
-
-    if(e.isIntersecting){
-
-      e.target.classList.add('show');
-
-      obs.unobserve(e.target);
-
-    }
-
-  });
-
-},{threshold:.15});
-
-
-document
-  .querySelectorAll('.reveal')
-  .forEach(el=>obs.observe(el));
-
 </script>
 
 </body>
